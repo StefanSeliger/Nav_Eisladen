@@ -1,0 +1,54 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+header {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; 
+  background-color: #faeee7;
+  font-size: 2rem;
+  div {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    p {
+      margin-right: 20px;
+    }
+  }
+  nav {
+    ul {
+      display: flex; 
+      justify-content: space-around;
+      list-style: none;
+      li {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  width: 100vw; 
+  background: #9be3de;
+  color: white; 
+  padding: 40px 0; 
+  font-size: 2rem;
+}
+
+
+

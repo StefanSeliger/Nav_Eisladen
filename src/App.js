@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Component } from 'react';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Nav from './components/Nav.js';
+import Home from './pages/Home.js';
+import Menu from './pages/Menu.js';
+import Contact from './pages/Contact.js';
+import OpeningHours from './pages/OpeningHours.js';
+import Gallery from './pages/Gallery.js';
+
+
+class App extends React.Component {
+  state = {
+
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/speisekarte" element={<Menu />} />
+            <Route path="/kontakt" element={<Contact />} />
+            <Route path="/oeffnungszeiten" element={<OpeningHours />} />
+            <Route path="/galerie" element={<Gallery />} />
+          </Routes>
+        </Router>
+
+      </div>
+    );
+  }
 }
 
 export default App;
